@@ -70,7 +70,7 @@ jobs:
         context: .
         file: ./DockerFile
         push: true
-        tags: ${{ secrets.ABHINAV_KUMAR }}/SentimentAnalysis-app:latest
+        tags: ${{ secrets.ABHINAV_KUMAR }}/sentimentanalysis-app:latest
 
     - name: Image digest
       run: echo ${{ steps.build-and-publish.outputs.digest }}
