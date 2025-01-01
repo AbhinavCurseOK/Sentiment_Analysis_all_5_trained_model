@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Prediction App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Text for Prediction</h1>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+        <form action="/predict" method="post">
+            <textarea name="user_text" placeholder="Enter your text here..." rows="4" required></textarea><br><br>
+            <label for="model_number">Select a Model:</label>
+            <select name="model_number" required>
+                <option value="" disabled selected>Select Model</option>
+                <option value="1">Random Forest Classifier</option>
+                <option value="2">Logistic Regression</option>
+                <option value="3">Linear SVC</option>
+                <option value="4">Linear SVC_1</option>
+                <option value="5">Logistic Regression_1</option>
+            </select><br><br>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
