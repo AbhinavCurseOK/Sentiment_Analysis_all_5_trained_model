@@ -1,0 +1,1 @@
+# In this project doing Sentiment Analysis on twitter data, then push it on dockerhub
